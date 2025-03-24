@@ -1,0 +1,1 @@
+here i use all-MiniLM-L6-v2 as embedding model

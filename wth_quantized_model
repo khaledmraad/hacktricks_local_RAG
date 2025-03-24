@@ -1,0 +1,25 @@
+quatization is a moetgode to optimize memory usage by reduising accuracy
+
+quantization can be done in the training, finetuning and inference stage (wtf does that mean idk)
+
+in deep learning its the process of converting high precision floating point numberes into low precision numbers (convert floats to integers (discretization) ok move on ) 
+
+so by representing floating point data with fewer bits,model can redice the size of the momdel
+
+there are 2 approach to represent float number :
+
+fixed point nmuber:
+for 8 bit sys : the first 5 bits represent the integer part and the last 3 bits represent the fraction part (yes always) so the max int part is 31 and the float part is 0.875
+and of the 16 sys same thing 
+yep stupid and af
+
+the less stupid methode is :
+floating point numbers:
+can represent larger numbers , thats what u need to kknow 
+
+so in quantization lets say you have a matrix , yyou map the max float  number into 127 and the min into -127 and other values their is a  equation to map them from -127 to 127
+
+
+
+
+

@@ -2,6 +2,7 @@ import chromadb
 from dotenv import load_dotenv
 from langchain_community.llms import Ollama
 from langchain.prompts.chat import ChatPromptTemplate
+from pathlib import Path
 
 DATA_PATH = r"data"
 CHROMA_PATH = r"chroma_db"

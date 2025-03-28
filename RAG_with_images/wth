@@ -1,0 +1,34 @@
+basic approach :
+input data -> (text, images) -> CLIP model(yeah idk) -> unified vector space(yes still dk) -> retrievel
+user query -> query embedding -> retrievel
+retrievel -> retieved content -> multimodel LLM -> generated response
+this will require a very capable embedding model to generate similare embedding vectors between text and images 
+yeah basic , any way
+
+better approach :
+input data -> text , data
+text -> text embedding ->unified vector space
+images -> image to text conversion -> image metadata , text description -> text embedding -> unified vector space
+unified vector space -> retrievel
+user query -> query embedding -> retrievel -> retieved content -> content type? -> LLM for text , LLM for images -> generate responses 
+this approach rely on text (metaadata and image desciption) there for it may lose some in the processs (yeah the retreal methodes still stupid)
+
+better better approach :
+input data -> text , data
+text -> text embedding -> vector store ->text retrieval -> top n text chunkcs ->mullti model re-ranker
+images -> image embedding -> image vector store -> image retrieval -> top n image chunks -> multi model re-ranker
+user query -> (text query embedding -> text retrieval ), (image query embedding  -> image retrieval)
+multi model re-ranker -> most relevent content -> multi model LLM -> generated response
+this approach rely on the re-ranker model to know if the text or the image are more important
+
+
+what we will implement :
+input data -> text , data
+text -> gpt embedding -> text vector store 
+image -> CLIP embedding -> image vector store 
+text vector store , image vector store , user query -> multi model vector store index -> retreiver -> display top 3 text and top 3 images -> process result -> display text , display images
+
+CLIP : constructive language image pre-training (okey??): create embeddings from images and text becaude its nn trained on many image so it knowes the content of many images
+because CLIP is created by openAI (nothing is open about it) there is OpenCLIP trained on more data than CLIP
+                                                 
+                                                 
